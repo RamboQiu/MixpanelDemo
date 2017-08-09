@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Mixpanel.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Mixpanel sharedInstanceWithToken:@"db5c80ad3b6d11091c54d994377414b5"];
+    [Mixpanel sharedInstance].enableLogging = YES;
     return YES;
 }
 
